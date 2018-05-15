@@ -35,8 +35,7 @@ class Solution:
                 return None
             if len(pre) == 1:
                 return TreeNode(pre[0])
-            else:
-                flag = TreeNode(pre[0])
-                flag.left = self.reConstructBinaryTreeTop(pre[1:tin.index(pre[0])+1],tin[:tin.index(pre[0])])
-                flag.right = self.reConstructBinaryTreeTop(pre[tin.index(pre[0])+1:],tin[tin.index(pre[0])+1:])
+            flag = TreeNode(pre[0])
+            flag.left = self.reConstructBinaryTreeTop(pre[1:tin.index(pre[0])+1],tin[:tin.index(pre[0])])
+            flag.right = self.reConstructBinaryTreeTop(pre[tin.index(pre[0])+1:],tin[tin.index(pre[0])+1:])
             return flag 
