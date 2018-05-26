@@ -1,5 +1,5 @@
 class Solution:
-    # array 二维列表
+    # array 二维列表[][]
     def Find(self, target, array):
         # write code here
         for i in range(len(array)):
