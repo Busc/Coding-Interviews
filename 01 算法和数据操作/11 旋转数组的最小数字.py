@@ -7,8 +7,7 @@ class Solution:
         mid = 0
         while rotateArray[left] >= rotateArray[right]:
             if right - left == 1:
-                mid = right
-                break
+                return rotateArray[right]
             mid = (right + left) // 2
             if rotateArray[left] == rotateArray[mid] and rotateArray[right] == rotateArray[mid]:
                 # 无法判断最小值在哪一段
@@ -19,7 +18,6 @@ class Solution:
             elif rotateArray[mid] <= rotateArray[right]:
                 # 最小值位于前半段或者就是mid
                 right = mid
-        return rotateArray[mid]
 
     def orderSearch(self, rotateArray, firstInd, lastInd):
         minNum = rotateArray[firstInd]
